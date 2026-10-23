@@ -1,6 +1,6 @@
 ---
 title: "Linear Model with Prediction"
-author: "Dr. J"
+author: "Daniel Barraza"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -25,10 +25,13 @@ knitr::opts_chunk$set(echo = TRUE)
 data(mtcars)
 ```
 
+
 # View first 6 rows and summary
 ```{r}
 head(mtcars)
 ```
+
+
 
 # Model 1:
  mpg (miles per gallon) is the response (Y)
@@ -36,9 +39,17 @@ head(mtcars)
 
 ## data summary
 ### graphical summary
+```{r}
+plot(mpg~wt,data=mtcars,pch=19)
+grid()
+```
+this plot shows that as the weight increases the miles per gallon decrease.
+
 
 ### numerical summary
-
+```{r}
+cor(mtcars$mpg,mtcars$wt)
+```
 ### model summary
 
 ```{r}
