@@ -149,5 +149,5 @@ anova_result <- anova(model1, model3)
 print(anova_result)
 ```
 
-# Discussion and Conculsions
-
+# Discussion and Conclusions
+vehicle weight and engine displacement don't have any linear relationship with mpg. It doesn't make a difference.
