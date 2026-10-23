@@ -52,16 +52,19 @@ cor(mtcars$mpg,mtcars$wt)
 ```
 ### model summary
 
+
+
 ```{r}
 model1 <- lm(mpg ~ wt, data = mtcars)
 summary(model1)
 ```
+
+### predicted mpg
 ```{r}
-newData = data.frame(wt=3.050, disp=122)
+newData = data.frame(wt = 3.05, disp = 122)
 print(predict(model1, newData, interval = 'predict'))
 ```
 
-### predicted mpg
 
 # Model 2:
 
@@ -70,7 +73,9 @@ print(predict(model1, newData, interval = 'predict'))
 
 ## data summary
 ### graphical summary
-
+```{r}
+plot(mpg ~ wt+disp, data = mtcars)
+```
 ### numerical summary
 
 ### model summary
@@ -81,6 +86,9 @@ model2 <- lm(mpg ~ disp, data = mtcars)
 summary(model2)
 ```
 ### predicted mpg 
+```{r}
+print(predict(model2, newData, interval = 'predict'))
+```
 
 # Model 3 :
 
@@ -92,6 +100,7 @@ summary(model2)
 ```{r}
 plot(mpg ~ wt+disp, data = mtcars)
 ```
+
 ### numerical summary
 
 ### model summary
@@ -108,14 +117,22 @@ summary(model3)
 ## data summary
 
 ### graphical summary
+
+
 ```{r}
 plot(mpg ~ wt+disp, data=mtcars)
 ```
+
 ### numerical summary
+
+numerical summary is the linear fit
 
 ### model summary
 
+
 # anova: compare models 2 and 3
+
+
 
 model3 <- lm(mpg ~ wt+disp, data = mtcars)
 
